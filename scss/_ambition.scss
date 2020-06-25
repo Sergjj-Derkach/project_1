@@ -1,0 +1,57 @@
+.ambition{
+    background: url("../image/ambition/Photo.png") top/cover;
+    padding-top: 75px;
+
+    .container{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        .red_more{
+            max-width: 510px; 
+
+            h1{
+                color: #314a5b;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 53px;
+                text-transform: uppercase;
+                margin-bottom: 26px;
+                
+                span{
+                    @include red_dot;
+                }
+
+                @media (max-width:480px) {
+                    font-size: 36px;
+                }
+            }
+
+            p{
+                color: #314a5b;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 41px;
+            }
+
+            a{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 171px;
+                height: 64px;
+                background-color: #fa5c65;
+                border-radius: 10px;
+                color: #ffffff;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+}

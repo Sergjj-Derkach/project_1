@@ -1,0 +1,107 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    
+    .container{
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 140px;
+            height: 74px;
+            background-color: #fa5c65;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #fff;
+            font-family: 'Domine', serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+
+            span{
+                color: #314a5b;;
+            }
+        }
+
+        .menu_button{
+            width: 50px;
+            height: 50px;
+            background: url("../image/header/menu.svg") center/cover;
+            display: none;
+
+            &.open{
+                background-image: url("../image/header/close.svg");
+            }
+
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+
+            a{
+                color: #263742;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                text-transform: uppercase;
+
+                &:not(:nth-child(1)){
+                    margin-left: 30px;
+                }
+            }
+            
+            .twitter{
+                display: inline-block;
+                width: 20px;
+                height: 16px;
+                background: url("../image/header/Twitter.png") center/cover;
+            }
+
+            .facebook{
+                display: inline-block;
+                width: 10px;
+                height: 18px;
+                background: url("../image/header/Facebook.png") center/cover;
+            }
+        }
+
+        @media (max-width:768px) {
+            
+            .menu_button{
+                display: block;
+            }
+
+            nav{
+                display: flex;
+                position: fixed;
+                top: 75px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #b19e9f;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                &:not(.open){
+                    display: none;
+                }
+
+                a{
+                    font-size: 28px;
+                    margin: 10px  0 !important;
+                    
+                    &:not(.net){
+                        padding: 15px;
+                    }
+                }
+            }
+        }    
+    }
+}
